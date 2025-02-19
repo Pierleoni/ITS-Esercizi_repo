@@ -1,0 +1,16 @@
+list_places = ["Tokyo", "Athen", "Zurigo", "Barcellona", "Paris", "Florence"]
+print(list_places)
+alphabetic_order = sorted(list_places)
+print(alphabetic_order)
+unalphabetic_order = sorted(list_places, reverse=True)
+print(unalphabetic_order)
+print(list_places)
+
+list_places.reverse()
+print(list_places)
+list_places.reverse()
+print(list_places)
+list_places.sort()
+print(list_places)
+list_places.sort(reverse=True)
+print(list_places)
