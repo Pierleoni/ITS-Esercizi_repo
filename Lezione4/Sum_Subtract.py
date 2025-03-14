@@ -17,13 +17,13 @@
     
 
 
-
-if __name__ == "__main__":
-    def sum_subtract (a:int, b:int):
+def sum_subtract (a:int, b:int):
         somma = a + b
         sottrazione = a-b 
     
         return somma, sottrazione
+if __name__ == "__main__":
+    
 
     somma, sottrazione= sum_subtract(10,5)
     print(f"Somma: {somma}, Sottrazione: {sottrazione}")

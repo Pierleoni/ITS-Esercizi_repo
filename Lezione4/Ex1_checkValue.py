@@ -6,4 +6,5 @@ def check_value (a:int):
     else:
         print(f"{a} è uguale a 5")
 
-var_name = check_value(6)
+if __name__=="__main__":
+    var_name = check_value(6)
