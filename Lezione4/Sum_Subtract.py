@@ -18,10 +18,18 @@
 
 
 
+if __name__ == "__main__":
+    def sum_subtract (a:int, b:int):
+        somma = a + b
+        sottrazione = a-b 
+    
+        return somma, sottrazione
 
-def subtract (a:int, b:int):
-    result:int= 0
-    result= a-b
-    return result
-print(f"La sottrazione tra 10 e 5 è: {subtract(10,5)}")
+    somma, sottrazione= sum_subtract(10,5)
+    print(f"Somma: {somma}, Sottrazione: {sottrazione}")
+
+
+
+
+
 
