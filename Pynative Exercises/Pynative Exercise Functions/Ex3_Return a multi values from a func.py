@@ -5,3 +5,4 @@ def calculation(num1:int, num2:int)->int:
 
 res = calculation(40,10)
 print(res)
+
