@@ -1,17 +1,18 @@
 class Persona:
-    def __init__(self,):
-        self.name = ""
-        self.lastname = ""
-        self.age = 0
-    def display_data(self): #Indica che questa funzione appartiene alla classe Persona
-        print(f"Nome: {self.name}\nCognome: {self.lastname} \nEtà: {self.age}")
+    def __init__(self,name,last,age):
+        self.name = name
+        self.lastname = last
+        self.age = age
         
     '''
     Mi consente di impostare un valore per self.name
     '''
     def set_name(self, name:str ) -> None:
         self.name = name
-    
+        
+        def __str__(self):
+            pass
+        
     
     '''
     Mi consente di impostare un valore per self.lastname
@@ -35,8 +36,9 @@ class Persona:
     def getAge(self) -> int:
         return self.age
 
+
 # Crea un oggetto di tipo Persona
-m:Persona = Persona ()
+m:Persona = Persona ("Marco", "Pierleoni", 27)
 # Imposta i nomi di una Persona
 m.set_name("Marco")
 
@@ -49,7 +51,3 @@ m.set_age(29)
 m.display_data()
 print("-----------")
 print(m.getName(), m.getLastName(), m.getAge())
-
-
-
-
