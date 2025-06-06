@@ -9,8 +9,14 @@ class Solution:
         Returns:
             list[int]: ritorna una lista di interi, ovvero gli indici degli elementi della lista che se sommati equivalgono al param target
         """        
-        result_list:list[int]= [num[0]+nums[1:] for num in nums if sum(num)==target]
+        result_list:list[int]= [nums[0]+nums[1:] for num in nums if nums[0]+ nums[1]==target]
         
+        return result_list
 
             # if sum(num)==target:
             #     nums[0]
+
+
+s:Solution = Solution()
+
+print(s.twoSum([2,7,11,15], 9))
