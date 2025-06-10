@@ -39,12 +39,6 @@ class Customer:
         self.customer = customer_id
         self.name = name
         self.rented = rented_movies
-    
-    # def __str__(self):
-    #     return f"{self.customer} {self.name} {self.rented}"
-    
-    # def __repr__(self):
-    #     return self.__str__()
     # Questa funzione  aggiunge oggetti movie e torna una lista di oggetti movie 
     def rent_movie(self, movie:Movie) ->list[Movie]:
         # Se l'attributo di movie is_rented è false appende l'oggetto movie alla lista
