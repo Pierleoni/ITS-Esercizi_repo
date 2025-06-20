@@ -1,9 +1,9 @@
-import string
+from string import punctuation
 
 def freq_word(txt:str, )-> dict[str,int]:
     
     # Dizionario vuoto che deve contenere le parole come chiave e il numero dei tokens come valori
-    dict_count_word:dict[str,int] = {}
+    dict_count_word:dict[str,int] = dict()
     # Per splittare il testo in tokens
     tokens= txt.split()   
     n_tokens = 1
@@ -13,9 +13,9 @@ def freq_word(txt:str, )-> dict[str,int]:
         # Converte le parole in minuscolo
         word = word.lower()
         
-        word = word.strip(string.punctuation) #il .punctuation è un attributo del moudlo string che contiene tutti i caratteri di punteggiatura 
+        word = word.strip(punctuation) #il punctuation è un attributo del moudlo string che contiene tutti i caratteri di punteggiatura 
         # Se word equivale a una stringa vuota salta l'iterazione
-        if word == "":
+        if not word:
             continue
         
         # Se la prarola non si trova dentro il dizionario e gli assegna il valore di defualt di n_tokens 
@@ -29,4 +29,5 @@ def freq_word(txt:str, )-> dict[str,int]:
     return dict_count_word
 
 print(freq_word(" Hello, world! Hello... PYTHON? world."))
+print(freq_word(" Ciao, world! Hey... PYTHON? Ciao world."))
 

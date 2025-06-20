@@ -2,12 +2,11 @@ from typing import Any
 
 
 def binary_search_2(sequence:list[int], element:int) ->int:
-    # Assicura che gli elementi della lista vengono riordinati in modo ascendente
+    # Il metodo sorted assicura che la lista contenga elementi ordinati in modo ascendente
     sequence = sorted(sequence)
     # Inizzializzo la variabile che equivale al primo indice di una lista 
     begin_index:int = 0
     # L'ultimo indice equivlae alla lunghezza della lista -1, perché l'indicizzazione è zero based
-    # Il metodo sorted assicura che la lista contenga elementi ordinati in modo ascendente
     last_index:int = len(sequence)-1
     
     while begin_index <= last_index:

@@ -9,12 +9,13 @@ def ceasar_cipher( message:str, key:int)->str:
     # itera su ogni lettera del messaggio
     for letter in message:
     
-        # Controlla se la lettera si trova dentro la lista alphabet
+        
         if letter in ascii_lowercase:
             # Trova l'indice della lettera scorrendo dal primo indice  fino all'ultimo della lista alphabet
             new_letter = ascii_lowercase.index(letter)
             # somma l'indice trovato con il valore di key 
             result = (new_letter + key) % len(ascii_lowercase)
+            # result = (new_letter + key) % 26
             # punta al valore di result
             encrypted_letter = ascii_lowercase[result]
             # Aggiunge la lettera cripttata all messaggio criptato
