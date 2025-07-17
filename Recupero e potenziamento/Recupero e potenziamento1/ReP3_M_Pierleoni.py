@@ -123,16 +123,28 @@ def combattimento(a:Alieno, m: Mostro):
 def proclamaVincitore(c:Creatura):
     if not isinstance(c, Alieno) and not isinstance (c,Mostro):
         raise ValueError(f"Errore! {c} non è un istanza ne di Alieno ne di Mostro")
-    larghezza = len(str(c))+10
+    larghezza = len(c.__str__())+10
     altezza = 5
     
-    for i in range (altezza):
-        for j in range(larghezza): 
-            if i == 2 and j == 5:
-                if i == 2: 
-                    print (c)
+    for i in range(altezza):
+        for j in range(larghezza):
+                
+                if i == 0 or i == (altezza - 1) or j == 0 or j == (larghezza - 1):
+                    print('*', end='')
+                elif i == 2 and j == 5:
+                    print(c, end='')
+                    
+                    print('     *', end="")
+                    break
+                else:
+                    print(' ', end='')
+        
+        print()
 
-# ESEMPIO D'USO
+
+
+
+
 if __name__ == "__main__":
     a1 = Alieno("Robot-12345")
     print(a1)
@@ -150,13 +162,13 @@ if __name__ == "__main__":
     print(f"Vincitore: {vincitore}")
     
     a3:Alieno = Alieno("Robot-41119")
-    # a3._setMunizioni([0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196])
+    
     
     m1:Mostro = Mostro("gOrThOr", "GRAAAAAAAHHHH", "iiiiiiiiuuuu")
-    # m1._setAssalto([13, 23, 28, 80, 50, 56, 33, 55, 15, 20, 15, 94, 42, 16, 46])
+    
     vincitore2 = combattimento(a3, m1)
     print(f"Il vincitore è {vincitore2}")
-    
+    print("---------------------")
     proclamaVincitore(m1)
     
 

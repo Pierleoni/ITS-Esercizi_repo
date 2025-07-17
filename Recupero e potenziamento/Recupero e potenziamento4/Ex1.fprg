@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ex1"/>
+        <attribute name="authors" value="Project Lead"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-03 03:30:05 "/>
+        <attribute name="created" value="UHJvamVjdCBMZWFkO01BUkNPOzIwMjUtMDctMDM7IjAyOjU0OjUzICI7MjY5Ng=="/>
+        <attribute name="edited" value="UHJvamVjdCBMZWFkO01BUkNPOzIwMjUtMDctMDM7IjAzOjMwOjA1ICI7MTsyNzk2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tariffa" type="Real" array="False" size=""/>
+            <declare name="ore" type="Integer" array="False" size=""/>
+            <input variable="ore"/>
+            <assign variable="tariffa" expression="0"/>
+            <if expression="ore &lt;= 3">
+                <then>
+                    <assign variable="tariffa" expression="2.00"/>
+                </then>
+                <else>
+                    <if expression="ore&gt;3 &amp;&amp; ore &lt;24">
+                        <then>
+                            <if expression="ore %1!=0">
+                                <then>
+                                    <assign variable="ore" expression="roundup(ore)"/>
+                                </then>
+                                <else/>
+                            </if>
+                            <assign variable="tariffa" expression="2.00+(ore-3)*0.5"/>
+                        </then>
+                        <else>
+                            <assign variable="tariffa" expression="10.00"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="tariffa" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
