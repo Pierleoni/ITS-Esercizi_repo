@@ -33,9 +33,9 @@ def basic_ops_list(my_list:list[int])->None:
 
     # Avendo usato lo stack della chiamate: 
     # Richiamo in sequenza le sotto-funzioni, ciascuna con il parametro my_list
-    access_ele(my_list)
-    lenght_list(my_list)
-    check_empty_list(my_list)
+    access_ele(my_list.copy())
+    lenght_list(my_list.copy())
+    check_empty_list(my_list.copy())
     
 
 

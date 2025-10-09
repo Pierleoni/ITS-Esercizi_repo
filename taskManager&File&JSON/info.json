@@ -1,0 +1,16 @@
+{
+    "chiave1": "valore1",
+    "chiave2": "valore2",
+    "chiave3": "valore3",
+    "chiave4": "valore4",
+    "chiave5": "valore5",
+    "chiave6": {
+        "sottochiave1": "sottovalore1",
+        "sottochiave2": "sottovalore2",
+        "sottochiave3": "sottovalore3",
+        "sottochiave4": "sottovalore4",
+        "sottochiave5": "sottovalore5",
+        "sottochiave6": "sottovalore6"
+    }
+
+}
